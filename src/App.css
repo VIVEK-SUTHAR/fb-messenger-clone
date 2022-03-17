@@ -7,6 +7,34 @@
   pointer-events: none;
 }
 
+.app_form {
+  text-align: center;
+  background-color: #e9e9eb;
+  padding: 10px;
+  position: fixed;
+  bottom: 10px;
+  border-radius: 10px;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1px;
+}
+
+.app_formControl {
+  display: flex !important;
+  flex-direction: row !important;
+  /* justify-content: space-between !important; */
+}
+.app_input{
+  flex: 1;
+}
+.app_iconButton{
+  flex: 0;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -32,6 +60,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
