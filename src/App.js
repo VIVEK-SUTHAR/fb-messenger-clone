@@ -1,4 +1,4 @@
-import { Button, FormHelperText, Input, InputLabel, FormControl, IconButton } from '@material-ui/core';
+import { Button, FormHelperText, Input, FormControl, IconButton } from '@material-ui/core';
 import { useEffect, useState } from 'react';
 import FlipMove from 'react-flip-move';
 import fs from 'firebase/compat/app';
@@ -37,18 +37,19 @@ function App() {
 
   return (
     <div className="App">
-      <img src='https://scontent.famd1-1.fna.fbcdn.net/v/t39.8562-6/120009688_325579128711709_1736249742330805861_n.png?_nc_cat=1&ccb=1-5&_nc_sid=6825c5&_nc_ohc=qPNb_b7myvAAX8qe_MD&_nc_ht=scontent.famd1-1.fna&oh=00_AT_EaQmpncNznhz2cb3GRpwoxricfvJmlPf0fMN7M8rShw&oe=623654BD'></img>
-      <h1>Welcome To Messenger</h1>
-      <h1>Hello {username}</h1>
+      <div className="header">
+        <img src='https://scontent.famd1-1.fna.fbcdn.net/v/t39.8562-6/120009688_325579128711709_1736249742330805861_n.png?_nc_cat=1&ccb=1-5&_nc_sid=6825c5&_nc_ohc=qPNb_b7myvAAX8qe_MD&_nc_ht=scontent.famd1-1.fna&oh=00_AT_EaQmpncNznhz2cb3GRpwoxricfvJmlPf0fMN7M8rShw&oe=623654BD' alt=''></img>
+        <h1>Welcome To Messenger</h1>
+        <h1>Hello {username}</h1>
+      </div>
       <form className='app_form'>
         <FormControl className='app_formControl' fullWidth>
-          {/* <InputLabel>Enter a message</InputLabel> */}
           <Input className='app_input' placeholder='Enter a message' value={input} onChange={event => setInput(event.target.value)} />
           <IconButton className='app_iconButton' disabled={!input} variant='contained' color='primary' onClick={sendMessage}>
             <SendIcon />
           </IconButton>
           <FormHelperText />
-          {/* <Button variant='contained' disabled={!input} color='primary' type='submit' onClick={sendMessage}>Send your message</Button> */}
+          <Button variant='contained' disabled={!input} color='primary' type='submit' onClick={sendMessage}>Send your message</Button>
         </FormControl>
       </form>
       <FlipMove>
