@@ -49,7 +49,9 @@ function App() {
             <SendIcon />
           </IconButton>
           <FormHelperText />
-          <Button variant='contained' disabled={!input} color='primary' type='submit' onClick={sendMessage}>Send your message</Button>
+          {/* <Button variant='contained' disabled={!input} color='primary' type='submit' onClick={sendMessage}>Send your message</Button>
+           */}
+           <Button type='submit' className='btn'  onClick={sendMessage}/>
         </FormControl>
       </form>
       <FlipMove>
